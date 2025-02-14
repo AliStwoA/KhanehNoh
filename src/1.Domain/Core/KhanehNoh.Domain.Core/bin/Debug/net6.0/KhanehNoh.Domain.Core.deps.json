@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "KhanehNoh.Domain.Core/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "KhanehNoh.Domain.Core.dll": {}
+        }
+      },
+      "Framework/1.0.0": {
+        "runtime": {
+          "Framework.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KhanehNoh.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

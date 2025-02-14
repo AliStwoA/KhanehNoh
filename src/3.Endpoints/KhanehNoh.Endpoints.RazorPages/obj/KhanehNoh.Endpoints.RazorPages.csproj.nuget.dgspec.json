@@ -1,0 +1,259 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\3.Endpoints\\KhanehNoh.Endpoints.RazorPages\\KhanehNoh.Endpoints.RazorPages.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\Framework.csproj",
+        "projectName": "Framework",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\Framework.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj",
+        "projectName": "KhanehNoh.Domain.Core",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\Framework.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\0.Framework\\Framework\\Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj",
+        "projectName": "KhanehNoh.Infrastructure.EfCore",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\3.Endpoints\\KhanehNoh.Endpoints.RazorPages\\KhanehNoh.Endpoints.RazorPages.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\3.Endpoints\\KhanehNoh.Endpoints.RazorPages\\KhanehNoh.Endpoints.RazorPages.csproj",
+        "projectName": "KhanehNoh.Endpoints.RazorPages",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\3.Endpoints\\KhanehNoh.Endpoints.RazorPages\\KhanehNoh.Endpoints.RazorPages.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\3.Endpoints\\KhanehNoh.Endpoints.RazorPages\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

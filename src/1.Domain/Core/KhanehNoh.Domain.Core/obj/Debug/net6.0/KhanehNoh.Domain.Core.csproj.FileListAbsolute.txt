@@ -1,0 +1,15 @@
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\KhanehNoh.Domain.Core.deps.json
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\ref\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\KhanehNoh.Domain.Core.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.AssemblyInfoInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.AssemblyInfo.cs
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\ref\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\Framework.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\bin\Debug\net6.0\Framework.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.csproj.AssemblyReference.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Core\KhanehNoh.Domain.Core\obj\Debug\net6.0\KhanehNoh.Domain.Core.csproj.CopyComplete

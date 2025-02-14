@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "149889ff-3fbf-41ce-aba6-28b6d66cfd5b": {
+      "ProjectGuid": "149889ff-3fbf-41ce-aba6-28b6d66cfd5b",
+      "DisplayName": "Framework",
+      "ColorIndex": 0
+    },
+    "453050f5-8520-455e-ada8-f0f8b74eeec7": {
+      "ProjectGuid": "453050f5-8520-455e-ada8-f0f8b74eeec7",
+      "DisplayName": "KhanehNoh.Domain.Core",
+      "ColorIndex": 1
+    },
+    "57b97212-58e7-4a61-b94a-2a835073fabc": {
+      "ProjectGuid": "57b97212-58e7-4a61-b94a-2a835073fabc",
+      "DisplayName": "KhanehNoh.Infrastructure.EfCore",
+      "ColorIndex": 2
+    },
+    "cce2e2a6-9ab0-4673-9cac-caa765124ef8": {
+      "ProjectGuid": "cce2e2a6-9ab0-4673-9cac-caa765124ef8",
+      "DisplayName": "KhanehNoh.Endpoints.RazorPages",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
