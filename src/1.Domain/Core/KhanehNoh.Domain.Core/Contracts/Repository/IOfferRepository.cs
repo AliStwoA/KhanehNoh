@@ -9,14 +9,18 @@ namespace KhanehNoh.Domain.Core.Contracts.Repository
 {
     public interface IOfferRepository
     {
-        Task<List<Offer>> GetAllAsync();
-
-        Task<Offer> GetByIdAsync(int id);
-
-        Task AddAsync(Offer offer);
-
-        Task UpdateAsync(Offer offer);
-
-        Task DeleteAsync(int id);
+        Task<List<Offer>?> GetOfferesAsync(CancellationToken cancellationToken);
+        Task<List<Offer>?> GetUserOffersAsync(int expertId, CancellationToken cancellationToken);
+        Task<Offer?> GetOfferByIdAsync(int OfferId, CancellationToken cancellationToken);
+        Task<Offer?> GetUserOfferByIdAsync(int expertId, int OfferId, CancellationToken cancellationToken);
+        Task<List<Offer>> GetOffersWithDetailsAsync(CancellationToken cancellationToken);
+        Task<List<Offer>> GetUserOffersWithDetailsAsync(int expertId, CancellationToken cancellationToken);
+        Task<Offer?> GeOfferByIdWithDetailsAsync(int id, CancellationToken cancellationToken);
+        Task<Offer?> GetUserOfferByIdWithDetailsAsync(int expertId, int OfferId, CancellationToken cancellationToken);
+        Task<bool> CreateAsync(Offer Offer, CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(Offer Offer, CancellationToken cancellationToken);
+        Task<bool> UpdateAsync(Offer Offer, CancellationToken cancellationToken);
+        Task<bool> IsDelete(int OfferId, CancellationToken cancellationToken);
+        Task<bool> ChangeStatus(OrderStatusEnum status, int OfferId, CancellationToken cancellationToken);
     }
 }

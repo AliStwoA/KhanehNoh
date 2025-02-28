@@ -9,14 +9,13 @@ namespace KhanehNoh.Domain.Core.Contracts.Repository
 {
     public interface IHomeServiceRepository
     {
-        Task<List<HomeService>> GetAllAsync();
-
-        Task<HomeService> GetByIdAsync(int id);
-
-        Task AddAsync(HomeService homeService);
-
-        Task UpdateAsync(HomeService homeService);
-
-        Task DeleteAsync(int id);
+        Task<List<HomeService>?> GetHomeServicesAsync(CancellationToken cancellationToken);
+        Task<List<HomeService>?> GetHomeServicesWithDetailsAsync(CancellationToken cancellationToken);
+        Task<HomeService?> GetHomeServiceByIdAsync(int id, CancellationToken cancellationToken);
+        Task<HomeService?> GetHomeServiceByIdWithDetailsAsync(int homeServiceId, CancellationToken cancellationToken);
+        Task<bool> CreateAsync(HomeService homeService, CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(int homeServiceId, CancellationToken cancellationToken);
+        Task<bool> UpdateAsync(HomeService homeService, CancellationToken cancellationToken);
+        Task<bool> IsDelete(int homeServiceId, CancellationToken cancellationToken);
     }
 }

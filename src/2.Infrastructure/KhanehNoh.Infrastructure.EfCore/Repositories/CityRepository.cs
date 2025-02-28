@@ -12,44 +12,69 @@ namespace KhanehNoh.Infrastructure.EfCore.Repositories
 {
     public class CityRepository : ICityRepository
     {
-        private readonly ApplicationDbContext _db;
-        public CityRepository(ApplicationDbContext db)
+        private readonly ApplicationDbContext _appDbContext;
+
+        public CityRepository(ApplicationDbContext appDbContext)
         {
-            _db = db;
+            _appDbContext = appDbContext;
         }
 
-        public async Task AddAsync(City city)
-        {
-            await _db.Cities.AddAsync(city);
+        public async Task<List<City>> GetCitiesAsync(CancellationToken cancellationToken)
+            => await _appDbContext.Cities.AsNoTracking().ToListAsync(cancellationToken);
 
-            await _db.SaveChangesAsync();
-        }
 
-        public async Task DeleteAsync(int id)
+        public async Task<City?> GetCityByIdAsync(int id, CancellationToken cancellationToken)
+            => await _appDbContext.Cities.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+
+        public async Task<City?> GetCityByName(string title, CancellationToken cancellationToken)
+            => await _appDbContext.Cities.AsNoTracking().FirstOrDefaultAsync(c => c.Title == title, cancellationToken);
+
+        public async Task<bool> CreateAsync(City city, CancellationToken cancellationToken)
         {
-            var city = await _db.Cities.FindAsync(id);
-            if (city != null)
+            try
             {
-                _db.Cities.Remove(city);
-                await _db.SaveChangesAsync();
+                await _appDbContext.Cities.AddAsync(city, cancellationToken);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteAsync(City city, CancellationToken cancellationToken)
+        {
+            try
+            {
+                _appDbContext.Cities.Remove(city);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateAsync(City city, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var existCity = await _appDbContext.Cities.FirstOrDefaultAsync(c => c.Id == city.Id, cancellationToken);
+
+                if (existCity == null)
+                    return false;
+
+                existCity.Title = city.Title;
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Logic Errorr!!!");
             }
 
-        }
-
-        public async Task<List<City>> GetAllAsync()
-        {
-            return await _db.Cities.ToListAsync();
-        }
-
-        public async Task<City> GetByIdAsync(int id)
-        {
-            return await _db.Cities.FindAsync(id);
-        }
-
-        public async Task UpdateAsync(City city)
-        {
-            _db.Cities.Update(city);
-            await _db.SaveChangesAsync();
         }
     }
 }

@@ -1,0 +1,17 @@
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\KhanehNoh.Domain.Services.deps.json
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\KhanehNoh.Domain.Services.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\ref\KhanehNoh.Domain.Services.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\KhanehNoh.Domain.Services.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\Framework.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\KhanehNoh.Domain.Core.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\bin\Debug\net6.0\Framework.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.csproj.AssemblyReference.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.AssemblyInfoInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.AssemblyInfo.cs
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.csproj.CoreCompileInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.csproj.CopyComplete
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\ref\KhanehNoh.Domain.Services.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.Services\obj\Debug\net6.0\KhanehNoh.Domain.Services.pdb

@@ -12,44 +12,106 @@ namespace KhanehNoh.Infrastructure.EfCore.Repositories
 {
     public class SubCategoryRepository : ISubCategoryRepository
     {
-        private readonly ApplicationDbContext _db;
-        public SubCategoryRepository(ApplicationDbContext db)
+        private readonly ApplicationDbContext _appDbContext;
+
+        public SubCategoryRepository(ApplicationDbContext appDbContext)
         {
-            _db = db;
+            _appDbContext = appDbContext;
         }
 
-        public async Task AddAsync(SubCategory subCategory)
-        {
-            await _db.SubCategories.AddAsync(subCategory);
+        public async Task<List<SubCategory>?> GetSubCategoriesAsync(CancellationToken cancellationToken)
+         => await _appDbContext.SubCategories
+            .Include(s => s.Category)
+            .Include(s => s.HomeServices)
+         .ToListAsync(cancellationToken);
 
-            await _db.SaveChangesAsync();
-        }
+        public async Task<SubCategory?> GetSubCategoryByIdAsync(int id, CancellationToken cancellationToken)
+         => await _appDbContext
+         .SubCategories
+         .FirstOrDefaultAsync(s => s.Id == id, cancellationToken);
 
-        public async Task DeleteAsync(int id)
+        public async Task<List<SubCategory>?> GetSubCategoriesWithDetailsAsync(CancellationToken cancellationToken)
+           => await _appDbContext
+            .SubCategories
+            .Include(s => s.HomeServices)
+            .ToListAsync(cancellationToken);
+
+        public async Task<SubCategory?> GetCategoryByIdWithDetailsAsync(int id, CancellationToken cancellationToken)
+            => await _appDbContext
+             .SubCategories
+             .Include(s => s.HomeServices)
+             .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+
+
+
+        public async Task<bool> CreateAsync(SubCategory subCategory, CancellationToken cancellationToken)
         {
-            var subCategory = await _db.SubCategories.FindAsync(id);
-            if (subCategory != null)
+            try
             {
-                _db.SubCategories.Remove(subCategory);
-                await _db.SaveChangesAsync();
+                await _appDbContext.SubCategories.AddAsync(subCategory, cancellationToken);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteAsync(int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var subCategory = await _appDbContext.SubCategories
+                .Include(x => x.HomeServices)
+                .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+
+                if (subCategory == null)
+                {
+                    return false;
+                }
+                    
+
+                _appDbContext.SubCategories.Remove(subCategory);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Logic Errorr");
+            }
+        }
+
+        public async Task<bool> IsDelete(int subCategoryId, CancellationToken cancellationToken)
+        {
+            var existSubCategory = await _appDbContext.SubCategories.FirstOrDefaultAsync(r => r.Id == subCategoryId, cancellationToken);
+            if (existSubCategory == null)
+                return false;
+            existSubCategory.IsDeleted = true;
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
+        public async Task<bool> UpdateAsync(SubCategory subCategory, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var existSubCategory = await _appDbContext.SubCategories.FirstOrDefaultAsync(x => x.Id == subCategory.Id);
+                if (existSubCategory == null)
+                    return false;
+
+                existSubCategory.Title = subCategory.Title;
+                existSubCategory.PictureUrl = subCategory.PictureUrl;
+                existSubCategory.CategoryId = subCategory.CategoryId;
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Logic error");
             }
 
         }
 
-        public async Task<List<SubCategory>> GetAllAsync()
-        {
-            return await _db.SubCategories.ToListAsync();
-        }
-
-        public async Task<SubCategory> GetByIdAsync(int id)
-        {
-            return await _db.SubCategories.FindAsync(id);
-        }
-
-        public async Task UpdateAsync(SubCategory subCategory)
-        {
-            _db.SubCategories.Update(subCategory);
-            await _db.SaveChangesAsync();
-        }
     }
 }

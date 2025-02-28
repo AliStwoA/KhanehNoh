@@ -9,14 +9,18 @@ namespace KhanehNoh.Domain.Core.Contracts.Repository
 {
     public interface IRequestRepository
     {
-        Task<List<Request>> GetAllAsync();
-
-        Task<Request> GetByIdAsync(int id);
-
-        Task AddAsync(Request request);
-
-        Task UpdateAsync(Request request);
-
-        Task DeleteAsync(int id);
+        Task<List<Request>?> GetRequestsAsync(CancellationToken cancellationToken);
+        Task<List<Request>?> GetUserRequestsAsync(int customerId, CancellationToken cancellationToken);
+        Task<Request?> GetRequestByIdAsync(int requestId, CancellationToken cancellationToken);
+        Task<Request?> GetUserRequestByIdAsync(int customerId, int requestId, CancellationToken cancellationToken);
+        Task<List<Request>> GetRequestsWithDetailsAsync(CancellationToken cancellationToken);
+        Task<List<Request>> GetUserRequestsWithDetailsAsync(int customerId, CancellationToken cancellationToken);
+        Task<Request?> GetRequestByIdWithDetailsAsync(int requestId, CancellationToken cancellationToken);
+        Task<Request?> GetUserRequestByIdWithDetailsAsync(int customerId, int requestId, CancellationToken cancellationToken);
+        Task<bool> CreateAsync(Request request, CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(int requestId, CancellationToken cancellationToken);
+        Task<bool> UpdateAsync(Request request, CancellationToken cancellationToken);
+        Task<bool> IsDelete(int requestId, CancellationToken cancellationToken);
+        Task<bool> ChangeStatus(OrderStatusEnum status, int requestId, CancellationToken cancellationToken);
     }
 }

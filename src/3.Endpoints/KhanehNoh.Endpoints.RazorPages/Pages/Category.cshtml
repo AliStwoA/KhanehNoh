@@ -1,0 +1,76 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Pages.CategoryModel
+@{
+}
+<!-- post-page -->
+	<section id="main" class="clearfix ad-post-page">
+		<div class="container">
+
+			<div class="breadcrumb-section">
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li><a href="index.html">خانه</a></li>
+					<li>افزودن سفارش</li>
+				</ol><!-- breadcrumb -->						
+				<h2 class="title">درخواست سرویس خانه</h2>
+			</div><!-- banner -->
+
+				
+				
+			<div id="ad-post">
+				<div class="row category-tab">	
+					<div class="col-lg-4 col-md-6">
+						<div class="section cat-option select-category post-option">
+							<h4>یک زیر شاخه را انتخاب کنید</h4>
+							<ul role="tablist" class="nav nav-tabs">
+								@foreach (var category in Model.Categories){
+									<li><a  asp-route-categoryId="@category.Id">
+									<span class="select">
+										<img src="images/icon/1.png" alt="Images" class="img-">
+									</span>
+									@category.Title
+								</a></li>
+								}
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Tab panes -->
+					<div class="col-lg-4 col-md-6">
+						<div class="section tab-content subcategory post-option">
+							<h4>یک زیر شاخه را انتخاب کنید</h4>
+							<div role="tabpanel" class="tab-pane" id="cat1">
+							
+								@*<ul>
+									@foreach(var subCategory in Model.SelectedCategory.SubCategories)
+									{
+										<li>@subCategory.Title </li>
+									}
+
+								</ul>*@
+		
+						</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="section next-stap post-option">
+							<h2>ارسال آگهی تنها در <span>30 ثانیه</span></h2>
+							<p>لطفاً برای چندین مورد یا خدمات ، چندین تبلیغات ارسال نکنید. همه تبلیغات تکراری ، اسپم و طبقه بندی اشتباه حذف می شوند.</p>
+							<div class="btn-section">
+								<a href="ad-post-details.html" class="btn">بعدی</a>
+								<a href="#" class="btn-info">لغو</a>
+							</div>
+						</div>
+					</div><!-- next-stap -->
+				</div>
+				<div class="row">
+					<div class="col-sm-12 offset-sm-2 text-center">
+						<div class="ad-section">
+							<a href="#"><img src="images/ads/3.jpg" alt="Image" class="img-fluid"></a>
+						</div>
+					</div>
+				</div><!-- row -->
+			</div>				
+		</div><!-- container -->
+	</section><!-- post-page -->

@@ -20,7 +20,27 @@
       "ProjectGuid": "cce2e2a6-9ab0-4673-9cac-caa765124ef8",
       "DisplayName": "KhanehNoh.Endpoints.RazorPages",
       "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "5c374a85-92ed-4b47-895f-876d2a0a62b6": {
+      "ProjectGuid": "5c374a85-92ed-4b47-895f-876d2a0a62b6",
+      "DisplayName": "KhanehNoh.Domain.AppServices",
+      "ColorIndex": 4
+    },
+    "c33db777-3084-450d-aad2-aa59194108cb": {
+      "ProjectGuid": "c33db777-3084-450d-aad2-aa59194108cb",
+      "DisplayName": "KhanehNoh.Domain.Services",
+      "ColorIndex": 5
+    },
+    "9a2eb3cf-dd3f-4e2f-a1eb-9cbdd54f9a06": {
+      "ProjectGuid": "9a2eb3cf-dd3f-4e2f-a1eb-9cbdd54f9a06",
+      "DisplayName": "KhanehNoh.Domain.AppServices",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 7
 }

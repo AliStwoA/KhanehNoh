@@ -11,17 +11,21 @@ namespace KhanehNoh.Domain.Core.Entities.Orders
     {
         #region Properties
         public int Id { get; set; }
-        public decimal OfferPrice { get; set; }
-        public DateTime DliveryDate { get; set; }
-        public string? Description { get; set; }
+        public decimal Price { get; set; }
+        public DateTime DeliveryDate { get; set; }
+        public DateTime RegisterDate { get; set; } = DateTime.Now;
+        public bool IsDeleted { get; set; } = false;
+        public string Description { get; set; }
+        public OrderStatusEnum OfferStatus { get; set; }
         public bool IsAccepted { get; set; }
         #endregion
 
         #region NavigationProperties
         public int RequestId { get; set; }
         public Request Request { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public int ExpertId { get; set; }
+        public Expert Expert { get; set; }
+        
 
 
 

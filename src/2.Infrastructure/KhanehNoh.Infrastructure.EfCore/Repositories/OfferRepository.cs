@@ -1,4 +1,5 @@
-﻿using KhanehNoh.Domain.Core.Contracts.Repository;
+﻿using KhanehNoh.Domain.Core;
+using KhanehNoh.Domain.Core.Contracts.Repository;
 using KhanehNoh.Domain.Core.Entities.Orders;
 using KhanehNoh.Infrastructure.EfCore.Common;
 using Microsoft.EntityFrameworkCore;
@@ -12,44 +13,150 @@ namespace KhanehNoh.Infrastructure.EfCore.Repositories
 {
     public class OfferRepository : IOfferRepository
     {
-        private readonly ApplicationDbContext _db;
-        public OfferRepository(ApplicationDbContext db)
+        private readonly ApplicationDbContext _appDbContext;
+
+        public OfferRepository(ApplicationDbContext appDbContext)
         {
-            _db = db;
+            _appDbContext = appDbContext;
         }
 
-        public async Task AddAsync(Offer offer)
-        {
-            await _db.Offers.AddAsync(offer);
+        public async Task<List<Offer>?> GetOfferesAsync(CancellationToken cancellationToken)
+        => await _appDbContext.Offers
+             .Include(s => s.Request)
+        .ToListAsync(cancellationToken);
 
-            await _db.SaveChangesAsync();
-        }
+        public async Task<List<Offer>?> GetUserOffersAsync(int expertId, CancellationToken cancellationToken)
+        => await _appDbContext.Offers
+            .Where(s => s.ExpertId == expertId)
+            .ToListAsync(cancellationToken);
 
-        public async Task DeleteAsync(int id)
+
+        public async Task<Offer?> GetOfferByIdAsync(int OfferId, CancellationToken cancellationToken)
+         => await _appDbContext
+         .Offers
+         .FirstOrDefaultAsync(s => s.Id == OfferId, cancellationToken);
+
+        public async Task<Offer?> GetUserOfferByIdAsync(int expertId, int OfferId, CancellationToken cancellationToken)
+        => await _appDbContext.Offers
+            .FirstOrDefaultAsync(s => s.ExpertId == expertId && s.Id == OfferId, cancellationToken);
+
+
+        public async Task<List<Offer>> GetOffersWithDetailsAsync(CancellationToken cancellationToken)
+              => await _appDbContext
+               .Offers
+               .Include(s => s.Request)
+               .ThenInclude(s => s.HomeService)
+               .Include(s => s.Expert)
+               .ThenInclude(s => s.User)
+               .ToListAsync(cancellationToken);
+
+        public async Task<List<Offer>> GetUserOffersWithDetailsAsync(int expertId, CancellationToken cancellationToken)
+         => await _appDbContext
+             .Offers
+             .Where(s => s.ExpertId == expertId)
+
+             .Include(s => s.Request)
+             .ThenInclude(s => s.HomeService)
+             .Include(s => s.Expert)
+             .ThenInclude(s => s.User)
+             .ToListAsync(cancellationToken);
+
+
+        public async Task<Offer?> GeOfferByIdWithDetailsAsync(int id, CancellationToken cancellationToken)
+            => await _appDbContext
+            .Offers
+             .Include(s => s.Request)
+             .ThenInclude(s => s.HomeService)
+             .Include(s => s.Expert)
+             .ThenInclude(s => s.User)
+            .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+
+        public async Task<Offer?> GetUserOfferByIdWithDetailsAsync(int expertId, int OfferId, CancellationToken cancellationToken)
+        => await _appDbContext
+            .Offers
+             .Include(s => s.Request)
+             .ThenInclude(s => s.HomeService)
+             .Include(s => s.Expert)
+             .ThenInclude(s => s.User)
+            .FirstOrDefaultAsync(s => s.ExpertId == expertId && s.Id == OfferId, cancellationToken);
+
+        public async Task<bool> ChangeStatus(OrderStatusEnum status, int OfferId, CancellationToken cancellationToken)
         {
-            var offer = await _db.Offers.FindAsync(id);
-            if (offer != null)
+            var existOffer = await _appDbContext.Offers.FindAsync(OfferId, cancellationToken);
+            if (existOffer == null)
             {
-                _db.Offers.Remove(offer);
-                await _db.SaveChangesAsync();
+                return false;
+            }
+                
+            existOffer.OfferStatus = status;
+
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+
+        public async Task<bool> CreateAsync(Offer Offer, CancellationToken cancellationToken)
+        {
+            try
+            {
+                await _appDbContext.Offers.AddAsync(Offer, cancellationToken);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
 
         }
 
-        public async Task<List<Offer>> GetAllAsync()
+        public async Task<bool> DeleteAsync(Offer Offer, CancellationToken cancellationToken)
         {
-            return await _db.Offers.ToListAsync();
+            try
+            {
+                _appDbContext.Offers.Remove(Offer);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public async Task<Offer> GetByIdAsync(int id)
+        public async Task<bool> IsDelete(int OfferId, CancellationToken cancellationToken)
         {
-            return await _db.Offers.FindAsync(id);
+            var existOffer = await _appDbContext.Offers.FirstOrDefaultAsync(r => r.Id == OfferId, cancellationToken);
+            if (existOffer == null)
+                return false;
+            existOffer.IsDeleted = true;
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+            return true;
+        }
+        public async Task<bool> UpdateAsync(Offer Offer, CancellationToken cancellationToken)
+        {
+            try
+            {
+
+                var existOffer = await _appDbContext.Offers.FirstOrDefaultAsync(x => x.Id == Offer.Id);
+                if (existOffer == null)
+                    return false;
+
+                existOffer.RegisterDate = Offer.RegisterDate;
+                existOffer.Description = Offer.Description;
+                existOffer.DeliveryDate = Offer.DeliveryDate;
+                existOffer.Price = Offer.Price;
+                existOffer.RequestId = Offer.RequestId;
+
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+
+            }
+            catch
+            {
+                throw new Exception("Logic Error");
+            }
+
         }
 
-        public async Task UpdateAsync(Offer offer)
-        {
-            _db.Offers.Update(offer);
-            await _db.SaveChangesAsync();
-        }
     }
 }

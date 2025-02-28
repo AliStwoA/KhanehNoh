@@ -1,4 +1,5 @@
-﻿using KhanehNoh.Domain.Core.Entities.Users;
+﻿using KhanehNoh.Domain.Core.DTOs;
+using KhanehNoh.Domain.Core.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,10 @@ namespace KhanehNoh.Domain.Core.Contracts.Repository
 {
     public interface IUserRepository
     {
-        Task<List<User>> GetAllAsync();
+        Task<List<UserSummaryDto>> GetAllAsync(CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(int id, CancellationToken cancellationToken);
 
-        Task<User> GetByIdAsync(int id);
-
-        Task AddAsync(User user);
-
-        Task UpdateAsync(User user);
-
-        Task DeleteAsync(int id);
+        UserDto GetById(int id);
+        Task<bool> Update(UserDto model, CancellationToken cancellationToken);
     }
 }

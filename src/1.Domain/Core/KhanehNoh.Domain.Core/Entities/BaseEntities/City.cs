@@ -1,4 +1,5 @@
-﻿using KhanehNoh.Domain.Core.Entities.Users;
+﻿using KhanehNoh.Domain.Core.Entities.Orders;
+using KhanehNoh.Domain.Core.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,8 @@ namespace KhanehNoh.Domain.Core.Entities.BaseEntities
         #endregion
 
         #region NavigationProperties
-        public List<User> Users { get; set; } = new List<User>();
+        public List<User>? Users { get; set; } = new();
+        public List<Request>? Requests { get; set; } = new();
         #endregion
     }
 }

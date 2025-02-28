@@ -1,0 +1,119 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Pages.ProfileModel
+@{
+}
+<!-- ad-profile-page -->
+	<section id="main" class="clearfix  ad-profile-page">
+		<div class="container">
+		
+			<div class="breadcrumb-section">
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li><a href="index.html">خانه</a></li>
+					<li>پروفایل</li>
+				</ol><!-- breadcrumb -->						
+				<h2 class="title">پروفایل من</h2>
+			</div><!-- banner -->
+			
+			<div class="ad-profile section">	
+				<div class="user-profile">
+					<div class="user-images">
+						<img src="images/user.jpg" alt="User Images" class="img-fluid">
+					</div>
+					<div class="user">
+						<h2>سلام, <a href="#">کاربر عزیز</a></h2>
+						<h5></h5>
+					</div>
+
+					
+						
+				<ul class="user-menu">
+					<li class="active"><a href="my-profile.html">پروفایل</a></li>
+					<li><a asp-page="Requests">سفارشات من</a></li>
+					<li><a asp-page="Offers">پیشنهادات دریافت شده</a></li>
+					
+				</ul>
+			</div><!-- ad-profile -->	
+
+			<div class="profile">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="user-pro-section">
+							<!-- profile-details -->
+							<div class="profile-details section">
+								<h2>جزییات پروفایل</h2>
+								<!-- form -->
+								<div class="form-group">
+									<label>نام کاربری</label>
+									<input type="text" class="form-control" placeholder="کاربر عزیز">
+								</div>
+
+								<div class="form-group">
+									<label>ایمیل</label>
+									<input type="email" class="form-control" placeholder="jyuwe@mail.com">
+								</div>
+
+								<div class="form-group">
+									<label for="name-three">موبایل</label>
+									<input type="text" class="form-control" placeholder="+213 1234 56789">
+								</div>
+
+								<div class="form-group">
+									<label>شهر</label>
+									<select class="form-control">
+										<option value="#">ایران- تهران</option>
+										<option value="#">ایران- اراک</option>
+										<option value="#">ایران- قم</option>
+										<option value="#">ایران- مشهد</option>
+										<option value="#">ایران- تبریز</option>
+										<option value="#">ایران- شیراز</option>
+										<option value="#">ایران- کرمان</option>
+										
+									</select>
+								</div>	
+
+								<div class="form-group">
+									<label>شما به عنوان زیر فعالیت میکنید</label>
+									<select class="form-control">
+										<option value="#">کارشناس</option>
+										<option value="#">مشتری</option>
+									</select>
+								</div>					
+							</div><!-- profile-details -->
+
+							<!-- change-password -->
+							<div class="change-password section">
+								<h2>تغییر رمزعبور</h2>
+								<!-- form -->
+								<div class="form-group">
+									<label>رمزعبور قبلی</label>
+									<input type="password" class="form-control" >
+								</div>
+								
+								<div class="form-group">
+									<label>رمزعبور جدید</label>
+									<input type="password" class="form-control">	
+								</div>
+								
+								<div class="form-group">
+									<label>تکرار رمزعبور</label>
+									<input type="password" class="form-control">
+								</div>															
+							</div><!-- change-password -->
+																	
+							<a href="#" class="btn">به روز رسانی پروفایل</a>
+							<a href="#" class="btn cancle">انصراف</a>
+						</div><!-- user-pro-edit -->
+					</div><!-- profile -->
+
+					<div class="col-md-4 text-center">
+						<div class="recommended-cta">					
+							<div class="cta">
+							
+							</div>
+						</div><!-- cta -->
+					</div><!-- recommended-cta-->
+				</div><!-- row -->	
+			</div>				
+		</div><!-- container -->
+	</section><!-- ad-profile-page -->

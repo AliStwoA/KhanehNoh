@@ -16,6 +16,11 @@ namespace KhanehNoh.Infrastructure.EfCore.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Title).HasMaxLength(200).IsRequired();
 
+            builder.HasMany(x => x.Requests)
+                .WithOne(x => x.City)
+                .HasForeignKey(x => x.CityId)
+                .OnDelete(DeleteBehavior.NoAction);
+
             builder.HasMany(x => x.Users)
                 .WithOne(x => x.City)
                 .HasForeignKey(x => x.CityId)

@@ -9,14 +9,11 @@ namespace KhanehNoh.Domain.Core.Contracts.Repository
 {
     public interface ICityRepository
     {
-        Task<List<City>> GetAllAsync();
-
-        Task<City> GetByIdAsync(int id);
-
-        Task AddAsync(City city);
-
-        Task UpdateAsync(City city);
-
-        Task DeleteAsync(int id);
+        Task<List<City>> GetCitiesAsync(CancellationToken cancellationToken);
+        Task<City?> GetCityByIdAsync(int id, CancellationToken cancellationToken);
+        Task<City?> GetCityByName(string title, CancellationToken cancellationToken);
+        Task<bool> CreateAsync(City city, CancellationToken cancellationToken);
+        Task<bool> DeleteAsync(City city, CancellationToken cancellationToken);
+        Task<bool> UpdateAsync(City city, CancellationToken cancellationToken);
     }
 }

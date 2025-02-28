@@ -14,23 +14,31 @@ namespace KhanehNoh.Infrastructure.EfCore.Configurations
         public void Configure(EntityTypeBuilder<SubCategory> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Title).HasMaxLength(100).IsRequired();
+            builder.ToTable("SubCategories");
+            builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
+
+
+            builder.HasOne(x => x.Category)
+               .WithMany(x => x.SubCategories)
+               .HasForeignKey(x => x.CategoryId)
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.HomeServices)
                 .WithOne(x => x.SubCategory)
-                .HasForeignKey(x => x.SubCategoryId);
+                .HasForeignKey(x => x.SubCategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
 
             builder.HasData(new List<SubCategory>
             {
-                new SubCategory{Id = 1, CategoryId = 1, Title = "نظافت و پذیرایی", PictureUrl = ""},
-                new SubCategory{Id = 2, CategoryId = 1, Title = "شستشو", PictureUrl=""},
-                new SubCategory{Id = 3, CategoryId = 1, Title = "کارواش ودیتیلینگ", PictureUrl=""},
+                new SubCategory{Id = 1, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 1, Title = "نظافت و پذیرایی"},
+                new SubCategory{Id = 2, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 1, Title = "شستشو"},
+                new SubCategory{Id = 3, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 1, Title = "کارواش ودیتیلینگ"},
 
-                new SubCategory{Id = 4, CategoryId = 2, Title = "سرمایش و گرمایش", PictureUrl=""},
-                new SubCategory{Id = 5, CategoryId = 2, Title = "لوله کشی", PictureUrl=""},
-                new SubCategory{Id = 6, CategoryId = 2, Title = "برقکاری", PictureUrl=""},
+                new SubCategory{Id = 4, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 2, Title = "سرمایش و گرمایش"},
+                new SubCategory{Id = 5, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 2, Title = "لوله کشی"},
+                new SubCategory{Id = 6, IsDeleted = false,RegisterAt = new DateTime(2025, 2, 16, 12, 45, 0), CategoryId = 2, Title = "برقکاری"},
 
 
 

@@ -13,15 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infrastructure", "2.Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Endpoints", "3.Endpoints", "{B89531B9-717B-4B84-A762-2D3250E08F02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "src\0.Framework\Framework\Framework.csproj", "{149889FF-3FBF-41CE-ABA6-28B6D66CFD5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "src\0.Framework\Framework\Framework.csproj", "{149889FF-3FBF-41CE-ABA6-28B6D66CFD5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0146C679-2A53-4461-B707-015732ED91B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhanehNoh.Domain.Core", "src\1.Domain\Core\KhanehNoh.Domain.Core\KhanehNoh.Domain.Core.csproj", "{453050F5-8520-455E-ADA8-F0F8B74EEEC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KhanehNoh.Domain.Core", "src\1.Domain\Core\KhanehNoh.Domain.Core\KhanehNoh.Domain.Core.csproj", "{453050F5-8520-455E-ADA8-F0F8B74EEEC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhanehNoh.Infrastructure.EfCore", "src\2.Infrastructure\KhanehNoh.Infrastructure.EfCore\KhanehNoh.Infrastructure.EfCore.csproj", "{57B97212-58E7-4A61-B94A-2A835073FABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KhanehNoh.Infrastructure.EfCore", "src\2.Infrastructure\KhanehNoh.Infrastructure.EfCore\KhanehNoh.Infrastructure.EfCore.csproj", "{57B97212-58E7-4A61-B94A-2A835073FABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhanehNoh.Endpoints.RazorPages", "src\3.Endpoints\KhanehNoh.Endpoints.RazorPages\KhanehNoh.Endpoints.RazorPages.csproj", "{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KhanehNoh.Endpoints.RazorPages", "src\3.Endpoints\KhanehNoh.Endpoints.RazorPages\KhanehNoh.Endpoints.RazorPages.csproj", "{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{88186646-A91B-45EA-9891-06575BABA07C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KhanehNoh.Domain.Services", "src\1.Domain\Services\KhanehNoh.Domain.Services\KhanehNoh.Domain.Services.csproj", "{C33DB777-3084-450D-AAD2-AA59194108CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KhanehNoh.Domain.AppServices", "src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices.csproj", "{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33DB777-3084-450D-AAD2-AA59194108CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33DB777-3084-450D-AAD2-AA59194108CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33DB777-3084-450D-AAD2-AA59194108CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33DB777-3084-450D-AAD2-AA59194108CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +73,9 @@ Global
 		{453050F5-8520-455E-ADA8-F0F8B74EEEC7} = {0146C679-2A53-4461-B707-015732ED91B8}
 		{57B97212-58E7-4A61-B94A-2A835073FABC} = {1AA9037B-1E4F-4267-96D3-3F04C89E6712}
 		{CCE2E2A6-9AB0-4673-9CAC-CAA765124EF8} = {B89531B9-717B-4B84-A762-2D3250E08F02}
+		{88186646-A91B-45EA-9891-06575BABA07C} = {05A13FF5-5D57-4415-B200-444BBA8C9B9F}
+		{C33DB777-3084-450D-AAD2-AA59194108CB} = {88186646-A91B-45EA-9891-06575BABA07C}
+		{9A2EB3CF-DD3F-4E2F-A1EB-9CBDD54F9A06} = {88186646-A91B-45EA-9891-06575BABA07C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA61523A-E3B6-4BBF-AFD6-79C52AECE82E}

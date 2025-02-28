@@ -1,0 +1,17 @@
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\KhanehNoh.Domain.AppServices.deps.json
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\KhanehNoh.Domain.AppServices.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\ref\KhanehNoh.Domain.AppServices.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\KhanehNoh.Domain.AppServices.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\Framework.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\KhanehNoh.Domain.Core.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\KhanehNoh.Domain.Core.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\bin\Debug\net6.0\Framework.pdb
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.csproj.AssemblyReference.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.AssemblyInfoInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.AssemblyInfo.cs
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.csproj.CoreCompileInputs.cache
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.csproj.CopyComplete
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\ref\KhanehNoh.Domain.AppServices.dll
+C:\Users\ali s2a\source\repos\KhanehNoh\KhanehNoh\src\1.Domain\Services\KhanehNoh.Domain.AppServices\KhanehNoh.Domain.AppServices\obj\Debug\net6.0\KhanehNoh.Domain.AppServices.pdb

@@ -12,44 +12,108 @@ namespace KhanehNoh.Infrastructure.EfCore.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db)
+        private readonly ApplicationDbContext _appDbContext;
+
+        public CategoryRepository(ApplicationDbContext appDbContext)
         {
-            _db = db;
+            _appDbContext = appDbContext;
         }
 
-        public async Task AddAsync(Category category)
-        {
-            await _db.Categories.AddAsync(category);
+        public async Task<List<Category>> GetCategoriesAsync(CancellationToken cancellationToken)
+            => await _appDbContext.Categories
+            .Include(c => c.SubCategories)
+            .ToListAsync(cancellationToken);
+     
+        public async Task<Category?> GetCategoryByIdAsync(int id, CancellationToken cancellationToken)
+         => await _appDbContext
+         .Categories
+            .Include(c => c.SubCategories)
+         .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
 
-            await _db.SaveChangesAsync();
-        }
+        public async Task<List<Category>> GetCategoriesWithDetailsAsync(CancellationToken cancellationToken)
+           => await _appDbContext
+            .Categories
+            .Include(c => c.SubCategories)
+            .ThenInclude(c => c.HomeServices)
+            .ToListAsync(cancellationToken);
 
-        public async Task DeleteAsync(int id)
+        public async Task<Category?> GetCategoryByIdWithDetailsAsync(int id, CancellationToken cancellationToken)
+            => await _appDbContext
+            .Categories
+             .Include(c => c.SubCategories)
+             .ThenInclude(c => c.HomeServices)
+             .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+
+
+
+        public async Task<bool> CreateAsync(Category category, CancellationToken cancellationToken)
         {
-            var category = await _db.Categories.FindAsync(id);
-            if (category != null)
+            try
             {
-                _db.Categories.Remove(category);
-                await _db.SaveChangesAsync();
+                await _appDbContext.Categories.AddAsync(category, cancellationToken);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteAsync(int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var category = await _appDbContext.Categories
+                .Include(x => x.SubCategories)
+                .ThenInclude(x => x.HomeServices)
+                .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+                if (category == null)
+                    return false;
+                _appDbContext.Categories.Remove(category);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Logic Error");
             }
 
+
+
+
+
         }
 
-        public async Task<List<Category>> GetAllAsync()
+        public async Task<bool> IsDelete(int categoryId, CancellationToken cancellationToken)
         {
-            return await _db.Categories.ToListAsync();
+            var existCategory = await _appDbContext.Categories.FirstOrDefaultAsync(r => r.Id == categoryId, cancellationToken);
+            if (existCategory == null)
+                return false;
+            existCategory.IsDeleted = true;
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+            return true;
         }
 
-        public async Task<Category> GetByIdAsync(int id)
+        public async Task<bool> UpdateAsync(Category category, CancellationToken cancellationToken)
         {
-            return await _db.Categories.FindAsync(id);
-        }
+            try
+            {
+                var existingCategory = await _appDbContext.Categories.FirstOrDefaultAsync(x => x.Id == category.Id);
+                if (existingCategory == null)
+                    return false;
 
-        public async Task UpdateAsync(Category category)
-        {
-            _db.Categories.Update(category);
-            await _db.SaveChangesAsync();
+                existingCategory.Title = category.Title;
+                _appDbContext.Categories.Update(existingCategory);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+                return true;
+
+            }
+            catch
+            {
+                throw new Exception("Logic Errorr!!!");
+            }
+
         }
     }
 }

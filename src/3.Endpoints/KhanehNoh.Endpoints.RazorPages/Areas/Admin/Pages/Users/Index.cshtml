@@ -1,0 +1,95 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Areas.Admin.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = " مدیریت کاربران";
+}
+
+<section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="col-6 text-right">
+            <a asp-page="/Users/Create" class="btn btn-info">
+                افزودن کاربر جدید
+                <i class="fas fa-plus fa-sm"></i>
+                </a>
+        </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                                <th>#</th>
+                                <th>نام</th>
+                                <th>نام خانوادگی</th>
+                                <th>نام کاربری</th>
+                                <th>موبایل</th>
+                                <th>ایمیل</th>
+                                <th>شهر</th>                                   
+                                <th>عملیات</th>                 
+                </tr>
+                </thead>
+                <tbody>
+                                   @foreach (var user in @Model.users)
+                            {
+                                <tr>                             
+                                    <td>@user.Id</td>
+
+                                    @*@if (string.IsNullOrEmpty(user.ImagePath))
+                                    {
+                                        <td><img style="border-radius : 50%" src="~/AdminTemplate/images/user/placeholder.jpg" width="80" height="80" /></td>
+                                    }
+                                    else
+                                    {
+                                        <td><img style="border-radius : 50%" src="@user.ImagePath" width="80" height="80" /></td>
+                                    }*@
+
+                                    <td>@user.FirstName</td>
+                                    <td>@user.LastName</td>
+                                    <td>@user.UserName</td>
+                                    <td>@user.PhoneNumber</td>
+                                    <td>@user.Email</td>
+                                    <td>@user.City</td>
+                                    
+                <td>
+            <div class="btn-group" role="group">
+                <a class="btn btn-primary text-white" asp-page="Edit" asp-route-Id="@user.Id">
+                    <i class="fas fa-edit fa-sm"></i>
+                </a>
+
+                <form asp-page="Delete">
+                <button  class="btn btn-danger text-white"> 
+                    <i class="fas fa-trash fa-sm"></i>
+                </button>
+                </form>
+            </div>
+        </td>
+           </tr> 
+
+        }
+  </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->         
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+
+
+
+
+
+
+
+

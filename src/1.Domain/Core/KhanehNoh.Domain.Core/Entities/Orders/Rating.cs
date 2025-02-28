@@ -12,16 +12,18 @@ namespace KhanehNoh.Domain.Core.Entities.Orders
     {
         #region Properties
         public int Id { get; set; }
-        [Range(1, 5)]
-        public int? Rate { get; set; }
-
-        public string? Comment { get; set; }
+        public int Rate { get; set; }
+        public string Comment { get; set; }
+        public DateTime RegisterDate { get; set; }
+        public bool Status { get; set; } = false;
+        public bool IsDeleted { get; set; } = false;            
         #endregion
+
         #region NavigationProperties
-        public User User { get; set; }
-        public int UserId { get; set; }
-        public int RequestId { get; set; }
-        public Request Request { get; set; }
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+        public int ExpertId { get; set; }
+        public Expert Expert { get; set; }
         #endregion
     }
 }

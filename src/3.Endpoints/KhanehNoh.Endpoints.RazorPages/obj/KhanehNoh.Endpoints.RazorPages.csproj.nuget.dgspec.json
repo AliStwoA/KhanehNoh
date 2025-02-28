@@ -97,6 +97,142 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices.csproj",
+        "projectName": "KhanehNoh.Domain.AppServices",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\KhanehNoh.Domain.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\KhanehNoh.Domain.Services.csproj",
+        "projectName": "KhanehNoh.Domain.Services",
+        "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\KhanehNoh.Domain.Services.csproj",
+        "packagesPath": "C:\\Users\\ali s2a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ali s2a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Core\\KhanehNoh.Domain.Core\\KhanehNoh.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -156,6 +292,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.35, )"
@@ -210,6 +350,12 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices\\KhanehNoh.Domain.AppServices.csproj"
+              },
+              "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\KhanehNoh.Domain.Services.csproj": {
+                "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\1.Domain\\Services\\KhanehNoh.Domain.Services\\KhanehNoh.Domain.Services.csproj"
+              },
               "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj": {
                 "projectPath": "C:\\Users\\ali s2a\\source\\repos\\KhanehNoh\\KhanehNoh\\src\\2.Infrastructure\\KhanehNoh.Infrastructure.EfCore\\KhanehNoh.Infrastructure.EfCore.csproj"
               }
@@ -226,11 +372,49 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.18, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.1-dev-02340, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
