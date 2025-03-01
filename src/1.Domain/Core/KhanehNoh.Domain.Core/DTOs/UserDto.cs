@@ -20,7 +20,7 @@ namespace KhanehNoh.Domain.Core.DTOs
         public string? Address { get; set; }
         public int CityId { get; set; }
         public string? PictureUrl { get; set; }
-        public bool IsExpert { get; set; } 
+       
 
     }
 }

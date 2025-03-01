@@ -1,0 +1,42 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Areas.Admin.Pages.SubCategory_EditModel
+@{
+}
+<div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">ویرایش زیر دسته بندی</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form method="post">
+                  <input type="hidden" asp-for="SubCategory.Id"/>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>عنوان</label>
+                    <input asp-for="SubCategory.Title" class="form-control" type="text"  placeholder="عنوان را وارد کنید">
+                  </div>
+
+                  <div class="form-group input-group mb-3">
+                      <label>دسته بندی</label>
+                    <select asp-for="SubCategory.CategoryId" class="form-select "  multiple="multiple" data-placeholder="یک دسته بندی انتخاب کنید"
+                          style="width: 100%;text-align: right">
+                    @foreach (var category in @Model.Categories)
+                                    {
+                                        <option value="@category.Id">@category.Title</option>
+                                    }
+                  </select>
+                  </div >
+             
+                                             
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-success">ثبت</button>
+                  <a asp-page="/SubCategoryList" class="btn btn-danger">بازگشت</a>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->

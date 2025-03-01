@@ -1,0 +1,61 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Areas.Admin.Pages.OfferListModel
+@{
+    ViewData["Title"] = " مدیریت پیشنهاد ها";
+}
+
+<section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="col-6 text-right">
+            
+        </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>شناسه درخواست</th>
+                    <th>عنوان درخواست</th>
+                  <th>توضیحات</th>
+                  <th>قیمت پیشنهادی</th>
+                  <th>زمان پیشنهاد</th>
+                  <th>تاریخ تحویل</th>               
+                </tr>
+                </thead>
+                <tbody>
+        @foreach (var item in Model.Offers)
+        {
+           <tr>
+               <td>@item.Id</td>
+               <td>@item.RequestId</td>
+               <td>@item.Request.Title</td>            
+               <td>@item.Description</td>
+               <td>@item.Price</td>
+               <td>@item.RegisterDate</td>
+               <td>@item.DeliveryDate</td>           
+
+               
+           </tr> 
+
+        }
+  </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->         
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>

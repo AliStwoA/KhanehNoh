@@ -22,10 +22,6 @@ namespace KhanehNoh.Infrastructure.EfCore.Common
         {
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder builder)
-        //{
-        //    base.OnConfiguring(builder);
-        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

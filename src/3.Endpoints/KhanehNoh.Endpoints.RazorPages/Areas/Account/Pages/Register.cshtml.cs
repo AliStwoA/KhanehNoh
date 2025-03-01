@@ -15,13 +15,13 @@ namespace KhanehNoh.Endpoints.RazorPages.Areas.Account
     {
         private readonly IBaseDataAppService _baseDataAppService;
         private readonly IUserAppService _userAppService;
-        private readonly SignInManager<User> _signInManager;
+      
 
-        public RegisterModel(IBaseDataAppService baseDataAppService, IUserAppService userAppService, SignInManager<User> signInManager)
+        public RegisterModel(IBaseDataAppService baseDataAppService, IUserAppService userAppService)
         {
             _baseDataAppService = baseDataAppService;
             _userAppService = userAppService;
-            _signInManager = signInManager;
+            
         }
 
         [BindProperty]
@@ -38,8 +38,8 @@ namespace KhanehNoh.Endpoints.RazorPages.Areas.Account
 
         public async Task<IActionResult> OnPost(CancellationToken cancellationToken)
         {
-          var result = await _userAppService.Register(User, cancellationToken);
-            
+          await _userAppService.Register(User, cancellationToken);
+          
             return RedirectToPage("Index");
         }
     }

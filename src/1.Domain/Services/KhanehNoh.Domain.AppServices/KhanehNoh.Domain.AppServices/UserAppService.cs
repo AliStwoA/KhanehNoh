@@ -76,7 +76,7 @@ namespace KhanehNoh.Domain.AppServices
                 if (model.Role == RoleEnum.Customer)
                 {
                     var userCustomerId = user.Customer!.Id;
-                    await _userManager.AddClaimAsync(user, new Claim("userCustomerId", user.Customer.Id.ToString()));
+                    await _userManager.AddClaimAsync(user, new Claim("userCustomerId", userCustomerId.ToString()));
                 }
 
                 await _signInManager.PasswordSignInAsync(user.UserName, model.Password, true, false);

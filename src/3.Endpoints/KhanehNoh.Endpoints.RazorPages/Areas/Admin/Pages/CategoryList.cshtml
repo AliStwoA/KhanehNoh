@@ -1,0 +1,68 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Areas.Admin.Pages.CategoryListModel
+@{
+    ViewData["Title"] = " مدیریت دسته بندی ها";
+}
+
+<section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="col-6 text-right">
+            <a asp-page="/Category_Create" class="btn btn-info">
+                افزودن دسته بندی جدید
+                <i class="fas fa-plus fa-sm"></i>
+                </a>
+        </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                  <th>عنوان</th>
+                  <th> تعداد زیر دسته بندی ها</th>
+                  <th>عملیات</th>                 
+                </tr>
+                </thead>
+                <tbody>
+        @foreach (var category in Model.Categories)
+        {
+           <tr>
+               <td>@category.Id</td>
+               <td>@category.Title</td>
+              <td>@category.SubCategories?.Count</td>
+                <td>
+            <div class="btn-group" role="group">
+                <a  class="btn btn-primary text-white" asp-page="/Category_Edit" asp-route-Id="@category.Id">
+                    <i class="fas fa-edit fa-sm"></i>
+                </a>
+
+                <form method="post" asp-page-handler="Delete" asp-route-id="@category.Id">
+                <button type="submit" class="btn btn-danger text-white" onclick="return confirm('آیا از حذف این دسته بندی مطمئن هستید؟')"> 
+                    <i class="fas fa-trash fa-sm"></i>
+                </button>
+                </form>
+            </div>
+        </td>
+           </tr> 
+
+        }
+  </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->         
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>

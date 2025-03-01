@@ -1,0 +1,31 @@
+﻿@page
+@model KhanehNoh.Endpoints.RazorPages.Areas.Admin.Pages.Category_EditModel
+@{
+}
+<div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">ویرایش دسته بندی</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form method="post">
+                  <input type="hidden" asp-for="Category.Id"/>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>عنوان</label>
+                    <input asp-for="Category.Title" class="form-control" type="text"  placeholder="عنوان را وارد کنید">
+                  </div>
+             
+                                             
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-success">ثبت</button>
+                  <a asp-page="/Category" class="btn btn-danger">بازگشت</a>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->

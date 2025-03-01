@@ -30,10 +30,6 @@ namespace KhanehNoh.Endpoints.RazorPages.Areas.Account
             public string Password { get; set; }
         }
 
-        public void OnGet()
-        {
-        }
-
         public async Task<IActionResult> OnPostAsync()
         {
             //returnUrl ??= Url.Content("~/Admin/Index");
